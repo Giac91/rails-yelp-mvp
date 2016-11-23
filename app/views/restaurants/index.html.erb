@@ -1,0 +1,14 @@
+<h1>Our Best Restaurants</h1>
+
+<script src="https://use.fontawesome.com/7f7aeaff86.js"></script>
+
+<ul>
+<% @restaurants.each do |restaurant| %>
+  <li><h2><%= restaurant.name %></h2></li>
+  <p> <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> <%= restaurant.address %> </p>
+  <p> <i class="fa fa-phone-square" aria-hidden="true"></i> <%= restaurant.phone_number %> </p>
+  <p><%= restaurant.category %></p>
+<% end %>
+</ul>
+
+<%= link_to "Add New...", "/restaurants/new" %>
